@@ -1,0 +1,50 @@
+0	abc
+1	START FUNC
+2	num
+3	length
+4	intnumPrint, 2
+5	i
+6	j
+7	first
+8	temp
+9	out "enter number"
+10	t3 = 2
+11	t2 = 3 / t3
+12	t5 = 2
+13	t4 = 9 - t5
+14	t7 = 4
+15	t6 = 3 * t7
+16	t8 = 3
+17	t6  = t6  - t8
+18	t4  = t4  + t6
+19	t2  = t2  - t4
+20	t1 = 1 - t2
+21	t0 = i + t1
+22	i = t0
+23	in i
+24	t9 = length
+25	i = t9
+26	if (i GT 0) goto 28
+27	goto 44
+28	t10 = 0
+29	first = t10
+30	t11 = 1
+31	j = t11
+32	if (j SE i) goto 34
+33	goto 39
+34	out j
+35	t13 = 1
+36	t12 = j + t13
+37	j = t12
+38	goto 32
+39	t15 = 1
+40	t14 = i - t15
+41	i = t14
+42	muz
+43	goto 26
+44	if (i GT 1) goto 46
+45	goto 48
+46	t16 = 10
+47	first = t16
+48	ret i
+49	END FUNC

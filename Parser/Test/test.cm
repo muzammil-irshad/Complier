@@ -1,0 +1,36 @@
+int abc;
+def intnumPrint(int num, int length)
+{
+      int i, j, first, temp;
+print "enter number";
+i <- i+1-3/2;
+i<-'l';
+read i;
+      i <- length;
+      while (i> 0) 
+     {
+          first<-0;		#this line contains a comment
+          j <-1;
+          while (j <= i)	
+          {
+                 print j;
+                 j <- j + 1;
+          }
+     # this is a comment
+         i<- i - 1;
+
+## This is also a multi line comment ##
+int muz;
+##This is a 
+Multiline
+Comment##
+     }
+	 if (i > 1){
+	 first<-10;
+	 }
+	 else{
+		j <- j + 1;
+	 }
+
+ret i;
+}

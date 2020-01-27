@@ -1,0 +1,80 @@
+//IMPLEMENTED NESTED LOOP AND CONDITIONS
+//ALSO HANDLE PARENTHESIS AND NUMERIC CONSTANT
+
+
+
+//Class Private Variables
+Token* look; //token
+string* statement;
+vector<string*> threeAddressCode;
+int opCount; //optional parameter count
+int tempCount; //temp variable count
+int index; //to check index of tokens
+bool h2l; //higher to lower precedence operator
+
+
+P -> D P | ^
+
+D -> VD | FD
+
+FD -> def
+      emit("Start FUNC");
+      id ( OPL
+      emit(funcName + ", " + to_string(opCount));
+      ) { SL }
+      emit("END FUNC");
+
+SL -> S SL | ^
+
+S -> VD | IN | OUT | A | COND | L | RET
+
+OPL -> PL | ^
+
+PL -> PAR
+      {opCount++;}
+      R1
+
+R1 -> , PAR
+      {opCount++;}
+      R1 | ^
+
+PAR -> T
+       emit(look->lexeme);
+       id
+
+T -> int | char
+
+VD -> T
+      emit(look->lexeme);
+      id
+      R2 ;
+
+R2 -> ,
+      emit(look->lexeme);
+      id R2 | ^
+
+IN -> read
+      emit("in" + look->lexeme);
+      id ;
+
+OUT -> print
+       emit("out" + look->lexeme);
+       CH1 ;
+
+CH1 -> id | nc | sc | lc
+
+	IT WAS DIFFICULT TO COMPREHEND THE OPERATIONS IN CFG
+
+A -> id <- AE ;
+COND -> if ( BE ) CH2 ELSE
+ELSE -> else CH2 | ^
+CH2 -> S | { SL }
+L -> while ( BE ) CH2
+RET -> ret CH1 ;
+AE -> AE1 R3
+R3 -> + AE1 R3 | - AE1 R3 | ^
+AE1 -> AE2 R4
+R4 -> * AE2 R4 | / AE2 R4 | ^
+AE2 -> id | nc | lc | ( AE )
+BE -> CH3 ro CH3
+CH3 -> id | nc | lc

@@ -1,0 +1,1 @@
+Place cmm.exe and test.cm(can change input file name) in sample location. Then run it in command prompt

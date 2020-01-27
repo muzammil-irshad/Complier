@@ -1,0 +1,8 @@
+intnumPrint
+num
+length
+i
+j
+first
+temp
+muz

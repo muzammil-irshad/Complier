@@ -1,0 +1,52 @@
+P -> D P | ^
+D -> VD | FD
+FD -> def id ( OPL ) { SL }
+SL -> S SL | ^
+S -> VD | IN | OUT | A | COND | L | RET
+OPL -> PL | ^
+PL -> PAR R1
+R1 -> , PAR R1 | ^
+PAR -> T id
+T -> int | char
+VD -> T id R2 ;
+R2 -> , id R2 | ^
+IN -> read id ;
+OUT -> print CH1 ;
+CH1 -> id | nc | sc | lc
+A -> id <- AE ;
+COND -> if ( BE ) CH2 ELSE
+ELSE -> else CH2 | ^
+CH2 -> S | { SL }
+L -> while ( BE ) CH2
+RET -> ret CH1 ;
+AE -> AE1 R3
+R3 -> + AE1 R3 | - AE1 R3 | ^
+AE1 -> AE2 R4
+R4 -> * AE2 R4 | / AE2 R4 | ^
+AE2 -> id | nc | lc | ( AE )
+BE -> CH3 ro CH3
+CH3 -> id | nc | lc
+
+//Names
+
+P -> program
+D -> declaration
+FD -> function declaration
+SL -> statement list
+S -> statement
+OPL -> optional parameter list
+PL -> parameter list
+PAR -> parameter
+T -> type
+VD -> variable declaration
+IN -> input
+OUT -> output
+A -> assignment
+COND -> if statement
+ELSE -> else statement
+L -> loop
+RET -> return statement
+BE -> boolean expression
+AE, AE1, AE2 -> arithematic expression
+CH1, CH2, CH3 -> choices
+R1, R2, R3, R4 -> recursion

@@ -1,0 +1,9 @@
+abc	int
+intnumPrint	fun
+num	int
+length	int
+i	int
+j	int
+first	int
+temp	int
+muz	int

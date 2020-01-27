@@ -1,0 +1,542 @@
+P :
+	D
+	P
+
+D :
+	VD
+	FD
+
+VD :
+	T
+	id (abc)
+	R2
+	;
+
+T :
+	int
+
+FD :
+	def
+	id (intnumPrint)
+	(OPL)
+	{SL}
+
+OPL :
+	PL
+
+PL :
+	PAR
+	R1
+
+PAR :
+	T
+	id (num)
+
+T :
+	int
+
+R1 :
+	,
+	PAR
+	R1
+
+PAR :
+	T
+	id (length)
+
+T :
+	int
+
+SL :
+	S
+	SL
+
+S :
+	VD
+	IN
+	OUT
+	A
+	COND
+	L
+	RET
+
+VD :
+	T
+	id (i)
+	R2
+	;
+
+T :
+	int
+
+R2 :
+	,
+	id (j)
+	R2
+
+R2 :
+	,
+	id (first)
+	R2
+
+R2 :
+	,
+	id (temp)
+	R2
+
+OUT :
+	print
+	CH1
+	;
+
+CH1 :
+	sc ("enter number")
+
+A :
+	id (i)
+	<-
+	AE
+	;
+
+AE :
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	id (i)
+
+R3 :
+	+
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	nc (1)
+
+R3 :
+	-
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	(AE)
+
+AE :
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	nc (3)
+
+R4 :
+	/
+	AE2
+	R4
+
+AE2 :
+	nc (2)
+
+R3 :
+	-
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	(AE)
+
+AE :
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	nc (9)
+
+R3 :
+	-
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	nc (2)
+
+R3 :
+	+
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	nc (3)
+
+R4 :
+	*
+	AE2
+	R4
+
+AE2 :
+	nc (4)
+
+R3 :
+	-
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	nc (3)
+
+SL :
+	S
+	SL
+
+S :
+	VD
+	IN
+	OUT
+	A
+	COND
+	L
+	RET
+
+IN :
+	read
+	id (^)
+	;
+
+A :
+	id (i)
+	<-
+	AE
+	;
+
+AE :
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	id (length)
+
+L :
+	while
+	(BE)
+	CH2
+
+BE :
+	CH3
+	ro
+	CH3
+
+CH3 :
+	id (i)
+
+CH3 :
+	nc (0)
+
+CH2 :
+	{SL}
+	S
+
+SL :
+	S
+	SL
+
+S :
+	VD
+	IN
+	OUT
+	A
+	COND
+	L
+	RET
+
+A :
+	id (first)
+	<-
+	AE
+	;
+
+AE :
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	nc (0)
+
+SL :
+	S
+	SL
+
+S :
+	VD
+	IN
+	OUT
+	A
+	COND
+	L
+	RET
+
+A :
+	id (j)
+	<-
+	AE
+	;
+
+AE :
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	nc (1)
+
+L :
+	while
+	(BE)
+	CH2
+
+BE :
+	CH3
+	ro
+	CH3
+
+CH3 :
+	id (j)
+
+CH3 :
+	id (i)
+
+CH2 :
+	{SL}
+	S
+
+SL :
+	S
+	SL
+
+S :
+	VD
+	IN
+	OUT
+	A
+	COND
+	L
+	RET
+
+OUT :
+	print
+	CH1
+	;
+
+CH1 :
+	id (j)
+
+A :
+	id (j)
+	<-
+	AE
+	;
+
+AE :
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	id (j)
+
+R3 :
+	+
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	nc (1)
+
+SL :
+	S
+	SL
+
+S :
+	VD
+	IN
+	OUT
+	A
+	COND
+	L
+	RET
+
+A :
+	id (i)
+	<-
+	AE
+	;
+
+AE :
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	id (i)
+
+R3 :
+	-
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	nc (1)
+
+SL :
+	S
+	SL
+
+S :
+	VD
+	IN
+	OUT
+	A
+	COND
+	L
+	RET
+
+VD :
+	T
+	id (muz)
+	R2
+	;
+
+T :
+	int
+
+SL :
+	S
+	SL
+
+S :
+	VD
+	IN
+	OUT
+	A
+	COND
+	L
+	RET
+
+COND :
+	if
+	(BE)
+	CH2
+	ELSE
+
+BE :
+	CH3
+	ro
+	CH3
+
+CH3 :
+	id (i)
+
+CH3 :
+	nc (1)
+
+CH2 :
+	{SL}
+	S
+
+SL :
+	S
+	SL
+
+S :
+	VD
+	IN
+	OUT
+	A
+	COND
+	L
+	RET
+
+A :
+	id (first)
+	<-
+	AE
+	;
+
+AE :
+	AE1
+	R3
+
+AE1 :
+	AE2
+	R4
+
+AE2 :
+	nc (10)
+
+RET :
+	ret
+	CH1
+	;
+
+CH1 :
+	id (i)
+

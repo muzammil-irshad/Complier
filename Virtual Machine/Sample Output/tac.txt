@@ -1,0 +1,49 @@
+0	abc
+1	START FUNC
+2	read num
+3	read length
+4	intnumPrint, 2
+5	i
+6	j
+7	first
+8	temp
+9	t3 = 2
+10	t2 = 3 / t3
+11	t5 = 2
+12	t4 = 9 - t5
+13	t7 = 4
+14	t6 = 3 * t7
+15	t8 = 3
+16	t6 = t6 - t8
+17	t4 = t4 + t6
+18	t2 = t2 - t4
+19	t1 = 1 - t2
+20	t0 = i + t1
+21	i = t0
+22	read i
+23	t9 = length
+24	i = t9
+25	if i GT 0 goto 27
+26	goto 43
+27	t10 = 0
+28	first = t10
+29	t11 = 1
+30	j = t11
+31	if j SE i goto 33
+32	goto 38
+33	print j
+34	t13 = 1
+35	t12 = j + t13
+36	j = t12
+37	goto 31
+38	t15 = 1
+39	t14 = i - t15
+40	i = t14
+41	muz
+42	goto 25
+43	if i GT 1 goto 45
+44	goto 47
+45	t16 = 10
+46	first = t16
+47	ret i
+48	END FUNC
