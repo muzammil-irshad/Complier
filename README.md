@@ -2,7 +2,7 @@
 Implement multiple phases of compiler for custom language c--
 # The language contains the following elements:
 Data Types: int	char <br />
-Keywords: def ifelse while retprint read <br />
+Keywords: def ifelse while ret print read <br />
 Arithmetic operators: 	+	- 	* 	/ <br />
 Relational operators: 	<	<= 	>	>= 	== 	<> <br />
 Line comments: start the line with # <br />
