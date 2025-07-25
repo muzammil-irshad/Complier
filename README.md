@@ -1,5 +1,25 @@
 # Complier
 Implement multiple phases of compiler for custom language c--
+
+```cpp
+def intnumPrint(int num, int length)
+{
+    int i, j, first, temp;
+    print "enter number";
+    read i;
+    i <- length;
+    while (i > 0) {
+        first <- 0;
+        j <- 1;
+        while (j <= i) {
+            print j;
+            j <- j + 1;
+        }
+        i <- i - 1;
+    }
+    ret i;
+}
+```
 # The language contains the following elements:
 Data Types: int	char <br />
 Keywords: def ifelse while ret print read <br />
